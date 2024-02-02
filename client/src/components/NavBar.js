@@ -1,23 +1,38 @@
-import logo from '../pictures/logo.png' 
+import logo from '../pictures/logo.png';
+import { Link } from 'react-router-dom';
+import '../components/NavBar.css';
 
 export default function NavBar(props) {
     return (
-        <div className="flex gap-5 justify-between items-stretch text-3xl font-bold text-black max-md:flex-wrap">
-          <img
-            loading="lazy"
-            src= {logo}
-            className="object-center max-w-full aspect-[1.47] w-[253px]"
-          />
-          <div className="flex flex-col flex-1 justify-center items-end px-16 py-8 my-auto bg-rose-200 rounded-[50px] max-md:px-5 max-md:max-w-full">
-            <div className="flex gap-5 justify-between items-stretch mr-14 max-w-full w-[944px] max-md:flex-wrap max-md:mr-2.5">
-              <div className="my-auto">Home</div>
-              <div className="flex-auto">Upcoming Events</div>
-              <div className="flex-auto my-auto">Past Events</div>
-              <div className="flex-auto">Contact Us</div>
-              <div className="grow whitespace-nowrap">Sign In/Up</div>
-            </div>
+        <header className='background'>
+          <div className='logo'>
+            <img
+              className="logo-img" src={logo} alt="BigAtHeart" width="175px"
+            />
           </div>
-        </div>
+          <div className='content header'>
+            <nav >
+                <ul>
+                  <li>
+                    <Link to="/" className='nav-bar'>Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/upcoming-events" className='nav-bar'>Upcoming Events</Link>
+                  </li>
+                  <li>
+                    <Link to="/past-events">Past Events</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact-us">Contact Us</Link>
+                  </li>
+                  <li>
+                    <Link to="/sign-in">Sign In/Up</Link>
+                  </li>
+                </ul>
+              </nav>
+          </div>
+            
+        </header>
       );
 }
 
