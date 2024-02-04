@@ -14,7 +14,7 @@ export default function NavBar(props) {
             <nav >
                 <ul>
                   <li>
-                    <Link to="/" className='nav-bar'>Home</Link>
+                    <Link to="/hack4good" className='nav-bar'>Home</Link>
                   </li>
                   <li>
                     <Link to="/upcoming-events" className='nav-bar'>Upcoming Events</Link>
