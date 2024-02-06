@@ -1,18 +1,21 @@
-import React from "react"
 import React, {useState} from 'react' 
 import axios from 'axios'
+
 function Login(){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     function handleSubmit(event){
         event.preventDefault();
-        axios.post('')
+        axios.post('http://localhost:8081/users', {email, password})
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+        
     }
     return (
         <div>
             <div>
-                <form>
-                    <div onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
+                    <div> 
                         <label htmlFor="roleSelect">You are a: </label>
                         <select id="roleSelect">
                             <option value="">Select...</option>
