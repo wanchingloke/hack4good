@@ -26,7 +26,7 @@ export default function NavBar(props) {
                     <Link to="/contact-us">Contact Us</Link>
                   </li>
                   <li>
-                    <Link to="/sign-in">Sign In/Up</Link>
+                    <Link to="/Login">Sign In/Up</Link>
                   </li>
                 </ul>
               </nav>
