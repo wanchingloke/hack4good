@@ -4,7 +4,8 @@ module.exports = {
     "./src/components/NavBar.js",
     "./src/pages/Home.js",
     "./src/components/Footer.js",
-    "./src/pages/PastEvents.js"
+    "./src/pages/PastEvents.js",
+    "./src/components/Login.js"
   ],
   theme: {
     extend: {},
